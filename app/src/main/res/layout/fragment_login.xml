@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@drawable/splash"
+    tools:context=".LoginFragment">
+
+    <RelativeLayout
+        android:gravity="center"
+        android:background="@color/white"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/usernameTitleTextView"
+        android:layout_margin="5dp"
+        android:textColor="@color/green"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username"/>
+
+    <EditText
+        android:id="@+id/usernameEditText"
+        android:layout_below="@id/usernameTitleTextView"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textColor="@android:color/white"
+        android:textColorHint="@color/white1"
+        android:inputType="text"
+        android:hint="Username"/>
+
+    <TextView
+        android:id="@+id/passwordTitleTextView"
+        android:textColor="@color/green"
+        android:layout_below="@id/usernameEditText"
+        android:layout_margin="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password"/>
+
+    <EditText
+        android:id="@+id/passwordEditText"
+        android:layout_below="@id/passwordTitleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:textColor="@android:color/white"
+        android:textColorHint="@color/white1"
+        android:layout_margin="10dp"
+        android:hint="Password"
+        android:inputType="textPassword" />
+
+        <TextView
+            android:id="@+id/newUser"
+            android:text="New User ?"
+            android:layout_below="@id/loginButton"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_marginLeft="127dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:layout_below="@id/passwordEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:background="@drawable/border"
+        android:text="LOG IN"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

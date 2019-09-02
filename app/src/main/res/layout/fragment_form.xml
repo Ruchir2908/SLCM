@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    xmlns:oid="http://schemas.android.com/apk/res-auto"
+    tools:context=".FormFragment">
+
+     <LinearLayout
+         android:id="@+id/linearParent"
+         android:focusableInTouchMode="true"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:textAlignment="center"
+            android:textSize="25dp"
+            android:textColor="@color/green"
+            android:text="Complaint Registration Form"
+            android:padding="5dp"
+            android:background="@drawable/border"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:id="@+id/view"
+            android:background="@android:color/white"
+            android:layout_below="@id/titleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+
+
+        <TextView
+            android:id="@+id/areaTitleTextView"
+            android:text="Area:"
+            android:textSize="15dp"
+            android:textColor="@android:color/black"
+            android:layout_margin="5dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/areaTextView"
+            android:background="@drawable/border"
+            android:layout_margin="10dp"
+            android:layout_below="@id/areaTitleTextView"
+            android:layout_width="match_parent"
+            android:padding="5dp"
+            android:gravity="center_vertical"
+            android:layout_height="40dp" />
+
+        <TextView
+            android:id="@+id/cCentreTitleTextView"
+            android:text="Complaint Centre:"
+            android:textSize="15dp"
+            android:textColor="@android:color/black"
+            android:layout_margin="5dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/areaTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/cCentreTextView"
+            android:background="@drawable/border"
+            android:layout_margin="10dp"
+            android:layout_below="@id/cCentreTitleTextView"
+            android:layout_width="match_parent"
+            android:padding="5dp"
+            android:gravity="center_vertical"
+            android:layout_height="40dp"/>
+
+        <TextView
+            android:id="@+id/cCategoryTitleTextView"
+            android:text="Complaint Category:"
+            android:textSize="15dp"
+            android:textColor="@android:color/black"
+            android:layout_margin="5dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/cCentreTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/cCategoryTextView"
+            android:background="@drawable/border"
+            android:layout_margin="10dp"
+            android:layout_below="@id/cCategoryTitleTextView"
+            android:layout_width="match_parent"
+            android:padding="5dp"
+            android:gravity="center_vertical"
+            android:layout_height="40dp" />
+
+        <TextView
+            android:id="@+id/typeTitleTextView"
+            android:text="Type of fault"
+            android:textSize="15dp"
+            android:textColor="@android:color/black"
+            android:layout_margin="5dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/cCategoryTextView"
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_below="@id/typeTitleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/border"
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+
+            <Spinner
+                android:id="@+id/typeSpinner"
+                android:popupBackground="@android:color/white"
+                android:backgroundTint="@color/colorAccent"
+                android:layout_below="@id/typeTitleTextView"
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+            </Spinner>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/callerNameTitleTextView"
+            android:text="Caller Name:"
+            android:textSize="15dp"
+            android:textColor="@android:color/black"
+            android:layout_margin="5dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/callerNameEditText"
+            android:singleLine="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/border"
+            android:layout_below="@id/callerNameTitleTextView"
+            android:layout_width="match_parent"
+            android:padding="5dp"
+            android:gravity="center_vertical"
+            android:layout_height="40dp" />
+
+        <TextView
+            android:id="@+id/callerAddTitleTextView"
+            android:text="Caller Address:"
+            android:textSize="15dp"
+            android:textColor="@android:color/black"
+            android:layout_margin="5dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/callerNameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/callerAddEditText"
+            android:layout_margin="10dp"
+            android:background="@drawable/border"
+            android:layout_below="@id/callerAddTitleTextView"
+            android:minHeight="30dp"
+            android:layout_width="match_parent"
+            android:padding="5dp"
+            android:gravity="center_vertical"
+            android:layout_height="40dp" />
+
+        <TextView
+            android:id="@+id/divisionTitleTextView"
+            android:text="Division:"
+            android:textSize="15dp"
+            android:textColor="@android:color/black"
+            android:layout_margin="5dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/callerAddEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/divisionTextView"
+            android:focusable="false"
+            android:layout_margin="10dp"
+            android:background="@drawable/border"
+            android:layout_below="@id/divisionTitleTextView"
+            android:layout_width="match_parent"
+            android:padding="5dp"
+            android:gravity="center_vertical"
+            android:layout_height="40dp" />
+
+        <TextView
+            android:id="@+id/ccPhoneTitleTextView"
+            android:text="Complaint Center Phone:"
+            android:textSize="15dp"
+            android:textColor="@android:color/black"
+            android:layout_margin="5dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/divisionTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/ccPhoneTextView"
+            android:background="@drawable/border"
+            android:layout_margin="10dp"
+            android:layout_below="@id/ccPhoneTitleTextView"
+            android:layout_width="match_parent"
+            android:padding="5dp"
+            android:gravity="center_vertical"
+            android:layout_height="40dp" />
+
+        <TextView
+            android:id="@+id/callerPhoneTitleTextView"
+            android:text="Caller Phone:"
+            android:textSize="15dp"
+            android:textColor="@android:color/black"
+            android:layout_margin="5dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/ccPhoneTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/callerPhoneEditText"
+            android:singleLine="true"
+            android:inputType="number"
+            android:layout_margin="10dp"
+            android:background="@drawable/border"
+            android:layout_below="@id/callerPhoneTitleTextView"
+            android:layout_width="match_parent"
+            android:padding="5dp"
+            android:gravity="center_vertical"
+            android:layout_height="40dp" />
+
+        <TextView
+            android:id="@+id/alternatePhoneTitleTextView"
+            android:inputType="number"
+            android:text="Alternate Phone:"
+            android:textSize="15dp"
+            android:textColor="@android:color/black"
+            android:layout_margin="5dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/callerPhoneEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/alternatePhoneEditText"
+            android:singleLine="true"
+            android:layout_margin="10dp"
+            android:inputType="number"
+            android:background="@drawable/border"
+            android:layout_below="@id/alternatePhoneTitleTextView"
+            android:layout_width="match_parent"
+            android:padding="5dp"
+            android:gravity="center_vertical"
+            android:layout_height="40dp" />
+
+        <TextView
+            android:id="@+id/remarksTitleTextView"
+            android:text="Remarks:"
+            android:textSize="15dp"
+            android:textColor="@android:color/black"
+            android:layout_margin="5dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/alternatePhoneEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/remarksEditText"
+            android:layout_margin="10dp"
+            android:background="@drawable/border"
+            android:minHeight="30dp"
+            android:layout_below="@id/remarksTitleTextView"
+            android:layout_width="match_parent"
+            android:padding="5dp"
+            android:gravity="center_vertical"
+            android:layout_height="40dp" />
+
+        <TextView
+            android:id="@+id/locationTitleTextView"
+            android:text="Location:"
+            android:textSize="15dp"
+            android:textColor="@android:color/black"
+            android:layout_margin="5dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/remarksEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/locationTextView"
+            android:background="@drawable/border"
+            android:layout_margin="10dp"
+            android:layout_below="@id/locationTitleTextView"
+            android:layout_width="match_parent"
+            android:padding="5dp"
+            android:gravity="center_vertical"
+            android:layout_height="40dp"/>
+
+        <TextView
+            android:id="@+id/imageTitleTextView"
+            android:text="Image:"
+            android:textSize="15dp"
+            android:textColor="@android:color/black"
+            android:layout_margin="5dp"
+            android:layout_below="@id/locationTextView"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/cameraImageView"
+            android:background="@drawable/border"
+            android:layout_margin="10dp"
+            android:layout_below="@id/imageTitleTextView"
+            android:visibility="gone"
+            android:layout_width="400dp"
+            android:layout_height="400dp" />
+
+        <TextView
+            android:id="@+id/signTitleTextView"
+            android:text="Sign:"
+            android:textSize="15dp"
+            android:textColor="@android:color/black"
+            android:layout_margin="5dp"
+            android:layout_below="@id/cameraImageView"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/signImageView"
+            android:background="@drawable/border"
+            android:layout_margin="10dp"
+            android:layout_below="@id/signTitleTextView"
+            android:visibility="gone"
+            android:layout_width="400dp"
+            android:layout_height="400dp" />
+
+        <Button
+            android:id="@+id/cameraButton"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/round"
+            android:layout_below="@id/signImageView"
+            android:text="CAMERA"
+            android:textColor="#ffffff"
+            android:layout_width="165dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/signButton"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/round"
+            android:layout_below="@id/cameraImageView"
+            android:layout_toRightOf="@id/cameraButton"
+            android:text="SIGNATURE"
+            android:textColor="#ffffff"
+            android:layout_width="165dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/registerButton"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/round"
+            android:layout_below="@id/cameraButton"
+            android:text="REGISTER"
+            android:layout_width="165dp"
+            android:textColor="#ffffff"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/resetButton"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/round"
+            android:layout_below="@id/signButton"
+            android:layout_toRightOf="@id/registerButton"
+            android:text="RESET"
+            android:textColor="#ffffff"
+            android:layout_width="165dp"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+     </LinearLayout>
+</ScrollView>
